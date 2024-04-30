@@ -35,7 +35,7 @@ Cypress.Commands.add('finishOrder', (firstName, lastName, postalCode, messageFin
     cy.contains('Checkout: Your Information')
     cy.get(firstNameCheckoutInformation).type(firstName)
     if (lastName) {
-        cy.get(lastNameCheckoutInformation).type(lastName);
+        cy.get(lastNameCheckoutInformation).type(lastName)
     }
     cy.get(postalCodeCheckoutInformation).type(postalCode)
     cy.get(buttonContinueCheckout).click()
