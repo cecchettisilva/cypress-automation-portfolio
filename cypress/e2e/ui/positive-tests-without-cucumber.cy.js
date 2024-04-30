@@ -1,4 +1,4 @@
-context("Tests without cucumber", () => {
+context("Positive tests without cucumber (Sauce Labs - Swag Labs)", () => {
     
     let userLogin
 
