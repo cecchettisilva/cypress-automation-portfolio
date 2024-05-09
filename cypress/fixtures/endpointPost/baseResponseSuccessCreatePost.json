@@ -1,0 +1,18 @@
+{
+    "id": "string", 
+    "image": "string",
+    "likes": 1000,
+    "link": "",
+    "tags": [
+      "test",
+      "cypress"
+    ],
+    "text": "string",
+    "publishDate": "date",
+    "updatedDate": "date",
+    "owner": {
+      "id": "uuid",
+      "firstName": "string",
+      "lastName": "string"
+    }
+}
