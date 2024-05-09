@@ -1,0 +1,30 @@
+{
+    "utilUsers":[
+        {
+            "id": "6632e4c562be27803e8c2546",
+            "firstName": "william",
+            "lastName": "cecchetti",
+            "email": "williamtestcypress@gmail.com",
+            "registerDate": "2024-05-02T00:56:37.289Z",
+            "updatedDate": "2024-05-02T00:56:37.289Z"
+        },
+        {
+            "id": "6632e56e62be277f8f8c25bd",
+            "title": "mr",
+            "firstName": "william",
+            "lastName": "cechetti",
+            "email": "williamcechettitestcypress@gmail.com",
+            "registerDate": "2024-05-02T00:59:26.319Z",
+            "updatedDate": "2024-05-02T00:59:26.319Z"
+        },
+        {
+            "id": "6632f0bf62be2764238c33ac",
+            "title": "mr",
+            "firstName": "teste",
+            "lastName": "update",
+            "email": "testupdate@gmail.com",
+            "registerDate": "2024-05-02T01:47:43.589Z",
+            "updatedDate": "2024-05-02T01:47:43.589Z"
+        }
+    ]
+}
