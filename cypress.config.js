@@ -1,8 +1,7 @@
 const { defineConfig } = require("cypress")
 const webpack = require("@cypress/webpack-preprocessor")
-const {
-  addCucumberPreprocessorPlugin,
-} = require("@badeball/cypress-cucumber-preprocessor")
+const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor")
+
 
 async function setupNodeEvents(on, config) {
   await addCucumberPreprocessorPlugin(on, config)
@@ -12,6 +11,9 @@ async function setupNodeEvents(on, config) {
     webpack({
       webpackOptions: {
         resolve: {
+          fallback: {
+            "stream": require.resolve("stream-browserify")
+          },
           extensions: [".ts", ".js"],
         },
         module: {
@@ -34,6 +36,7 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
+
   e2e: {
     projectId: 'xxxx',
     viewportWidth: 1240,
@@ -44,6 +47,7 @@ module.exports = defineConfig({
     failOnStatusCode: false,
     baseUrlFrontend: "https://www.saucedemo.com",
     baseUrlAPI: "https://dummyapi.io/data/v1",
+    baseUrlPortfolio: "https://william-cecchetti-qa.surge.sh",
     defaultCommandTimeout: 10000,
     specPattern: "**/*cy.{js,feature}",
     setupNodeEvents
@@ -55,3 +59,5 @@ module.exports = defineConfig({
   }
   
 })
+
+require('@applitools/eyes-cypress')(module)

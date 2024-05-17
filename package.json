@@ -3,11 +3,13 @@
         "cy:open": "cypress open"
     },
     "dependencies": {
+        "@applitools/eyes-cypress": "^3.44.2",
         "@badeball/cypress-cucumber-preprocessor": "^20.0.4",
         "@cypress/webpack-preprocessor": "^6.0.1",
         "cypress": "^13.8.0",
         "cypress-plugin-api": "^2.11.1",
-        "joi": "^17.13.0"
+        "joi": "^17.13.0",
+        "stream-browserify": "^3.0.0"
     },
     "cypress-cucumber-preprocessor": {
         "stepDefinitions": [
