@@ -12,3 +12,4 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
 })
 
+import 'cypress-axe'

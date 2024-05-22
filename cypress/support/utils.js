@@ -1,13 +1,30 @@
-cy.fixture('/endpointPost/baseResponseSuccessCreatePost.json').then((expectedResponse) => {
+export { terminalLog }
 
-    expectedResponse.id = responseCreatePost.id
-    expectedResponse.image = responseCreatePost.image
-    expectedResponse.text = responseCreatePost.text
-    expectedResponse.publishDate = responseCreatePost.publishDate
-    expectedResponse.updatedDate = responseCreatePost.updatedDate
-    expectedResponse.owner.id = responseCreatePost.owner.id
-    expectedResponse.owner.firstName = responseCreatePost.owner.firstName
-    expectedResponse.owner.lastName = responseCreatePost.owner.lastName
+function terminalLog(violations) {
+    cy.task(
+      'log',
+      `${violations.length} accessibility violation${
+        violations.length === 1 ? '' : 's'
+      } ${violations.length === 1 ? 'was' : 'were'} detected`
+    )
+    
+    const violationData = violations.map(
+      ({ id, impact, description, help, helpUrl, nodes }) => ({
+        Violation: id,
+        Impact: impact,
+        Description: description,
+        Resume: help,
+        Documentation: helpUrl,
+        Elements: nodes.length
+      })
+    )
 
-    expect(responseCreatePost).to.deep.equal(expectedResponse)
-})
+    const violationNodeData = violations.map(
+      ({ nodes }) => ({
+        ...nodes
+      })
+    )
+
+    cy.task('table', violationData)
+    cy.task('log', JSON.stringify(violationNodeData, null, 4))
+}
