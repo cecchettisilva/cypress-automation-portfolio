@@ -2,12 +2,12 @@ const { defineConfig } = require("cypress")
 const webpack = require("@cypress/webpack-preprocessor")
 const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor")
 
-
 async function setupNodeEvents(on, config) {
-  await addCucumberPreprocessorPlugin(on, config)
 
-  on(
-    "file:preprocessor",
+  require('@cypress/grep/src/plugin')(config)
+
+  await addCucumberPreprocessorPlugin(on, config)
+  on("file:preprocessor",
     webpack({
       webpackOptions: {
         resolve: {
@@ -32,8 +32,18 @@ async function setupNodeEvents(on, config) {
       },
     })
   )
-  return config;
-}
+    on('task', {
+      log(message) {
+        console.log(message)
+        return null
+      },
+      table(message) {
+        console.table(message)
+        return null
+      }
+    })
+    return config;
+  }
 
 module.exports = defineConfig({
 
