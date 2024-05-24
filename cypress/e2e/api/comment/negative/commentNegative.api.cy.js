@@ -1,10 +1,10 @@
 
-import { schemaResponseErrorComment } from '../../../fixtures/contracts/comment/schemaComment'
+import { schemaResponseErrorComment } from '../../../../fixtures/contracts/comment/schemaComment'
 import { faker } from '@faker-js/faker'
 
 context("Negative tests api (Dummy Api)", () => {
 
-    describe("[Dummy Api][API] - Negative comment flow tests", { tags: 'testapi' }, () => {
+    describe("[Dummy Api][API] - Negative comment flow tests", { tags: [ 'testApi', 'testApiNegative' ] }, () => {
 
         it("[POST] Create a comment with invalid post parameter and validate the schema contract", () => {
 

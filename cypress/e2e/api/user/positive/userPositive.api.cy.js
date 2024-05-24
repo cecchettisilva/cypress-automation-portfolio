@@ -1,5 +1,5 @@
 
-import { schemaResponse200User } from '../../../fixtures/contracts/user/schemaUser'
+import { schemaResponse200User } from '../../../../fixtures/contracts/user/schemaUser'
 import { faker } from '@faker-js/faker'
 
 context("Positive tests api (Dummy Api)", () => {
@@ -12,7 +12,7 @@ context("Positive tests api (Dummy Api)", () => {
         })
     })
 
-    describe("[Dummy Api][API] - Positive user flow tests", { tags: 'testapi' }, () => {
+    describe("[Dummy Api][API] - Positive user flow tests", { tags: [ 'testApi', 'testApiPositive' ] }, () => {
 
         it("[POST] Create user", () => {
 

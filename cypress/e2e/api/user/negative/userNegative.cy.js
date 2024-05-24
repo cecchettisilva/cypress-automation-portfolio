@@ -1,10 +1,10 @@
 
-import { schemaResponseErrorUser } from '../../../fixtures/contracts/user/schemaUser'
+import { schemaResponseErrorUser } from '../../../../fixtures/contracts/user/schemaUser'
 import { faker } from '@faker-js/faker'
 
 context("Positive tests api (Dummy Api)", () => {
 
-    describe("[Dummy Api][API] - Negative user flow tests", { tags: 'testapi' }, () => {
+    describe("[Dummy Api][API] - Negative user flow tests", { tags: [ 'testApi', 'testApiNegative' ] }, () => {
 
         it("[POST] Create user with invalid title and email", () => {
 

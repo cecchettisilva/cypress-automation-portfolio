@@ -12,7 +12,7 @@ context("Negative tests without cucumber (Sauce Labs - Swag Labs)", () => {
         cy.visit(Cypress.config().baseUrlFrontend)
     })
 
-    describe("[Sauce Demo][UI] - Negative flow tests", { tags: 'testui' }, () => {
+    describe("[Sauce Demo][UI] - Negative flow tests", { tags: [ 'testUi', 'testUiNegative' ] }, () => {
 
         it("Unsuccessful login with wrong password", () => {
             cy.login(userLogin.user_wrong_pass, userLogin.user_wrong_pass, 'Epic sadface: Username and password do not match any user in this service')

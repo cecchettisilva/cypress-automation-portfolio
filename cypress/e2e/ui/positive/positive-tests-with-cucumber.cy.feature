@@ -1,5 +1,6 @@
 Feature: Positive tests with cucumber (Sauce Labs - Swag Labs)
 
+@testUiPositiveCucumber
   Scenario Outline: Successful login
     Given access home page
     When do login with "<username>" and "<password>"

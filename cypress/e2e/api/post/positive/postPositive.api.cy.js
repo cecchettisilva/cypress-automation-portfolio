@@ -1,10 +1,10 @@
 
-import { schemaResponse200Post } from '../../../fixtures/contracts/post/schemaPost'
+import { schemaResponse200Post } from '../../../../fixtures/contracts/post/schemaPost'
 import { faker } from '@faker-js/faker'
 
 context("Positive tests api (Dummy Api)", () => {
 
-    describe("[Dummy Api][API] - Positive post flow tests", { tags: 'testapi' }, () => {
+    describe("[Dummy Api][API] - Positive post flow tests", { tags: [ 'testApi', 'testApiPositive' ]}, () => {
 
         it("[GET] Get a list of all posts by user", () => {
             

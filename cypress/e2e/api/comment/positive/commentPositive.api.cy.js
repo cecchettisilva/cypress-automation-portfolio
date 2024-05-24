@@ -1,10 +1,10 @@
 
-import { schemaResponse200CreateComment, schemaResponse200CommentByUserPost } from '../../../fixtures/contracts/comment/schemaComment'
+import { schemaResponse200CreateComment, schemaResponse200CommentByUserPost } from '../../../../fixtures/contracts/comment/schemaComment'
 import { faker } from '@faker-js/faker'
 
 context("Positive tests api (Dummy Api)", () => {
 
-    describe("[Dummy Api][API] - Positive comment flow tests", { tags: 'testapi' }, () => {
+    describe("[Dummy Api][API] - Positive comment flow tests", { tags: [ 'testApi', 'testApiPositive' ]}, () => {
 
         it("[POST] Create a comment and validate the schema contract", () => {
 

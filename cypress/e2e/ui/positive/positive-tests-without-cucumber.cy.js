@@ -12,7 +12,7 @@ context("Positive tests without cucumber (Sauce Labs - Swag Labs)", () => {
         cy.visit(Cypress.config().baseUrlFrontend)
     })
 
-    describe("[Sauce Demo][UI] - Positive flow tests", { tags: 'testui' }, () => {
+    describe("[Sauce Demo][UI] - Positive flow tests", { tags: [ 'testui', 'testUiPositive' ] }, () => {
 
         it("Successful login", () => {
             cy.login(userLogin.standard_user, userLogin.standard_user, 'Products')

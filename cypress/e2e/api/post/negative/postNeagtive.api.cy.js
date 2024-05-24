@@ -1,9 +1,9 @@
 
-import { schemaResponseErrorPost } from '../../../fixtures/contracts/post/schemaPost'
+import { schemaResponseErrorPost } from '../../../../fixtures/contracts/post/schemaPost'
 
 context("Negative tests api (Dummy Api)", () => {
 
-    describe("[Dummy Api][API] - Negative post flow tests", { tags: 'testapi' }, () => {
+    describe("[Dummy Api][API] - Negative post flow tests", { tags: [ 'testApi', 'testApiNegative' ] }, () => {
 
         it("[POST] Create a post with invalid likes parameter", () => {
             

@@ -1,5 +1,6 @@
-Feature: Positive tests with cucumber (Sauce Labs - Swag Labs)
+Feature: Negative tests with cucumber (Sauce Labs - Swag Labs)
 
+@testUiNegativeCucumber
   Scenario Outline: Unsuccessful login with wrong password
     Given access home page
     When do login with "<username>" and "<password>"

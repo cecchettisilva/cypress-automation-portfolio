@@ -1,9 +1,9 @@
 
-import { schemaResponse200Tag, schemaResponse200TagByPost } from '../../../fixtures/contracts/tag/schemaTag'
+import { schemaResponse200Tag, schemaResponse200TagByPost } from '../../../../fixtures/contracts/tag/schemaTag'
 
 context("Negative tests api (Dummy Api)", () => {
 
-    describe("[Dummy Api][API] - Negative tag flow tests", { tags: 'testapi' }, () => {
+    describe("[Dummy Api][API] - Negative tag flow tests", { tags: [ 'testApi', 'testApiNegative' ] }, () => {
 
         it("[GET] Validate a invalid tag by post and validate the schema contract", () => {
             
